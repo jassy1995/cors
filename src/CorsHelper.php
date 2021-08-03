@@ -3,12 +3,13 @@ namespace CorsHelper;
 class CorsHelper{
 
   public static function cors($data=null) {
-    $arrLength = count($data['origin']);
-    $verifyOrigin = "";
-    for($x = 0; $x < $arrLength; $x++) {
-      $verifyOrigin = $data['origin'][$x];
-     
-  }
+     $verifyOrigin;
+    if(isset($data['origin'])){
+      $arrLength = count($data['origin']);
+      for($x = 0; $x < $arrLength; $x++) {
+        $verifyOrigin = $data['origin'][$x];
+    }
+    }
     if($_SERVER['HTTP_ORIGIN'] == $verifyOrigin){
     $url=  '*';
     $method = 'POST,GET,DELETE,PUT,PATCH,OPTIONS';
