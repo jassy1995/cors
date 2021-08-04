@@ -2,7 +2,7 @@
 namespace CorsHelper;
 class CorsHelper{
 
-  public static function cors($data=null) {
+  public static function cors($data=[]) {
      $verifyOrigin;
     if(isset($data['origin'])){
       $arrLength = count($data['origin']);
