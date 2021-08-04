@@ -1,7 +1,12 @@
+..............PREREQUISITE...............
+must have composer installed on your pc
+if not download composer set up file and install it on your pc,then you can proceed to the below process
 ..............HOW TO USE CORS-HELPER.............
 STEP 1:In the root folder of your file run this command composer require prof/cors-helper
-STEP 2: require CorsHelper at the top(above all your code) e.g use CorsHelper\CorsHelper
-STEP 3: Call function like this CorsHelper::cors();
+STEP 2:place this line at the top of all your code | require __DIR__.'/vendor/autoload.php';
+STEP 3:place this line immediately after the above line | use CorsHelper\CorsHelper;
+STEP 4: place this line immediately after the above line | CorsHelper::cors();
+Awesome! cors has been setup for you,you are now granted access by cors-helper to work without cors problem.
 This is how the default set up look like,you did not need to do this below set up,am just showing you how the default set up look like.
 .................THIS IS THE DEFAULT SETUP....................
 CorsHelper::cors([
@@ -11,6 +16,7 @@ CorsHelper::cors([
 'maxAge'=>72800,
 ])
 ..............FULL DEFAULT EXAMPLE.....................
+require __DIR__.'/vendor/autoload.php';
 use CorsHelper\CorsHelper;
 CorsHelper::cors();
 So simple cors is enable and you can start your work without any cors problem.
