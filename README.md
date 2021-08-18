@@ -1,7 +1,7 @@
 ..............HOW TO USE CORS-HELPER.............
 STEP 1:In the root folder of your file run this command composer require prof/cors-helper
 STEP 2:put this at the top of all your code | require **DIR**.'/vendor/autoload.php';
-STEP 3: require CorsHelper at the top(above all your code) e.g use CorsHelper\CorsHelper
+STEP 3: place this immediately after the above line | use CorsHelper\CorsHelper;
 STEP 4: Call function like this CorsHelper::GrantRequest();
 This is how the default set up look like,you did not need to do this below set up,am just showing you how the default set up look like.
 ......THIS IS THE DEFAULT SETUP......
